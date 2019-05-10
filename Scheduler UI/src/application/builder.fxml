@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,16 +9,11 @@
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.schedulerClass">
    <children>
-      <ImageView fitHeight="101.0" fitWidth="86.0" layoutX="119.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/profile_picture.png" />
-         </image>
-      </ImageView>
       <VBox layoutY="25.0" prefHeight="400.0" prefWidth="86.0" style="-fx-background-color: #17246D;" styleClass="navigation_box" stylesheets="@application.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#homeButtonAction" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/home.png" />
                      </image>
@@ -35,7 +29,7 @@
                </graphic></Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#buildButtonAction" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/build.png" />
                      </image>
@@ -43,7 +37,7 @@
                </graphic></Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#viewButtonAction" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/view.png" />
                      </image>
@@ -52,7 +46,7 @@
             </Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="84.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#settingsButtonAction" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/settings.png" />
                      </image>
@@ -61,6 +55,5 @@
             </Button>
          </children></VBox>
       <ScrollBar layoutX="586.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="14.0" />
-      <ColorPicker layoutX="120.0" layoutY="125.0" prefHeight="23.0" prefWidth="84.0" />
    </children>
 </AnchorPane>

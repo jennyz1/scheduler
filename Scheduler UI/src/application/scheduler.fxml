@@ -25,40 +25,40 @@
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Project/images/home.png" />
+                        <Image url="@../../../images/home.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#profileButtonAction" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#profileButtonAction" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Project/images/profile.png" />
+                        <Image url="@../../../images/profile.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#buildButtonAction" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Project/images/build.png" />
+                        <Image url="@../../../images/build.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#viewButtonAction" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Project/images/view.png" />
+                        <Image url="@../../../images/view.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="84.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#settingsButtonAction" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Project/images/settings.png" />
+                        <Image url="@../../../images/settings.png" />
                      </image>
                   </ImageView>
                </graphic>

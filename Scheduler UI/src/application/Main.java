@@ -27,7 +27,7 @@ public class Main extends Application {
 			Screen screen = Screen.getPrimary();
 			Rectangle2D bounds = screen.getVisualBounds();
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setMaximized(true);
+			primaryStage.setMaximized(false);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
