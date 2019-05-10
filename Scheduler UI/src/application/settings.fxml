@@ -11,7 +11,7 @@
    <children>
       <VBox layoutY="25.0" prefHeight="400.0" prefWidth="86.0" style="-fx-background-color: #17246D;" styleClass="navigation_box" stylesheets="@application.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#homeButtonAction" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -19,7 +19,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#profileButtonAction" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#profileButtonAction" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -27,7 +27,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buildButtonAction" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#buildButtonAction" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -35,7 +35,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#viewButtonAction" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
                   <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#viewButtonAction" pickOnBounds="true" preserveRatio="true">
                      <image>
