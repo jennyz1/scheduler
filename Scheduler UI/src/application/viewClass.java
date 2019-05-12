@@ -14,7 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class schedulerClass {
+public class viewClass {
 	@FXML AnchorPane mainAnchorPane;
 	@FXML ScrollPane mainScrollPane;
 

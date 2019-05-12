@@ -8,6 +8,7 @@
 
 .table-view{
    -fx-background-color: transparent;
+   -fx-border-color: #17246D
 }
 .table-view:focused{
     -fx-background-color: transparent;
@@ -39,8 +40,16 @@
 	-fx-font-style: italic;
 }
 
+.text-field {
+	-fx-background-radius: 0;
+	-fx-border-color:#17246D
+}
 .choice-box{
 	-fx-background-radius: 0;
 	-fx-background-color: white;
-	-fx-border-color:black;
+	-fx-border-color:#17246D;
+}
+.date-picker{
+	-fx-background-radius: 0;
+	-fx-border-color:#17246D;
 }

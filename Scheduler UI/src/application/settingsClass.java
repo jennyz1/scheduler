@@ -14,9 +14,18 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class schedulerClass {
-	@FXML AnchorPane mainAnchorPane;
-	@FXML ScrollPane mainScrollPane;
+public class settingsClass {
+	@FXML TextField locationNameField;
+	@FXML TextField locationOpenField;
+	@FXML TextField locationCloseField;
+	@FXML TextField locationDurationField;
+	@FXML TextField emailField;
+	@FXML Button locationSaveButton;
+	@FXML Button editLocationButton;
+	@FXML Button resetYearButton;
+	@FXML Button addLocationButton;
+	@FXML Button deleteLocationButton;
+	@FXML Button saveEmailButton;
 
 	@FXML
 	private void homeButtonAction(ActionEvent event) throws IOException {
@@ -53,6 +62,7 @@ public class schedulerClass {
 		app_stage.setScene(viewScene);
 		app_stage.show();
 	}
+
 	@FXML
 	private void settingsButtonAction(ActionEvent event) throws IOException {
 		Parent settingspane = FXMLLoader.load(getClass().getResource("settings.fxml"));
@@ -62,4 +72,33 @@ public class schedulerClass {
 		app_stage.show();
 	}
 
+	@FXML
+	private void addLocationButtonAction(ActionEvent event) throws IOException {
+		locationNameField.setVisible(true);
+		locationOpenField.setVisible(true);
+		locationCloseField.setVisible(true);
+		locationDurationField.setVisible(true);
+		locationSaveButton.setVisible(true);
+	}
+	@FXML
+	private void locationSaveButtonAction(ActionEvent event) throws IOException {
+		/*take text from the text field and save it how it needs to be saved*/
+		locationNameField.setVisible(false);
+		locationOpenField.setVisible(false);
+		locationCloseField.setVisible(false);
+		locationDurationField.setVisible(false);
+		locationSaveButton.setVisible(false);
+	}
+	@FXML
+	private void editLocationButtonAction(ActionEvent event) throws IOException {
+
+	}
+	@FXML
+	private void saveEmailButtonAction(ActionEvent event) throws IOException {
+		/*gets email from text field and saves it to where it needs to be saved*/
+	}
+	@FXML
+	private void resetYearButtonAction(ActionEvent event) throws IOException {
+		/*resets the scheduled hours*/
+	}
 }

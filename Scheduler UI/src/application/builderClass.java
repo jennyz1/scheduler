@@ -9,14 +9,20 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class schedulerClass {
-	@FXML AnchorPane mainAnchorPane;
-	@FXML ScrollPane mainScrollPane;
+public class builderClass {
+;
+	@FXML Button generateScheduleButton;
+	@FXML Button editLocationButton;
+	@FXML DatePicker startingDatePicker;
+	@FXML DatePicker endingDatePicker;
+	@FXML VBox locationRadioButtons;
 
 	@FXML
 	private void homeButtonAction(ActionEvent event) throws IOException {
