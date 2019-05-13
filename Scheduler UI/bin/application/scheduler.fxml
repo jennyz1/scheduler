@@ -16,7 +16,7 @@
             <Insets top="-1.0" />
          </padding>
          <content>
-            <TextField alignment="CENTER" prefHeight="58.0" prefWidth="515.0" style="-fx-background-color: #17246D; -fx-text-fill: white; -fx-border-color: black; -fx-font-weight: bold; -fx-font-size: 17;" text="Pediatric Emergency Medicine of Johns Hopkins at Bayview" />
+            <TextField alignment="CENTER" editable="false" prefHeight="58.0" prefWidth="515.0" style="-fx-background-color: #17246D; -fx-text-fill: white; -fx-border-color: black; -fx-font-weight: bold; -fx-font-size: 17;" text="Pediatric Emergency Medicine of Johns Hopkins at Bayview" />
          </content>
       </ScrollPane>
       <VBox layoutY="25.0" prefHeight="400.0" prefWidth="86.0" style="-fx-background-color: #17246D;" styleClass="navigation_box" stylesheets="@application.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
