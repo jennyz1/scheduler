@@ -1,20 +1,26 @@
 package application;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class settingsClass {
+public class settingsClass implements Initializable {
 	@FXML TextField locationNameField;
 	@FXML TextField locationOpenField;
 	@FXML TextField locationCloseField;
@@ -26,6 +32,11 @@ public class settingsClass {
 	@FXML Button addLocationButton;
 	@FXML Button deleteLocationButton;
 	@FXML Button saveEmailButton;
+
+	@Override
+	public void initialize(URL url, ResourceBundle resources){
+		/*populate table*/
+	}
 
 	@FXML
 	private void homeButtonAction(ActionEvent event) throws IOException {
@@ -83,16 +94,42 @@ public class settingsClass {
 	@FXML
 	private void locationSaveButtonAction(ActionEvent event) throws IOException {
 		/*take text from the text field and save it how it needs to be saved*/
-		locationNameField.setVisible(false);
-		locationOpenField.setVisible(false);
-		locationCloseField.setVisible(false);
-		locationDurationField.setVisible(false);
-		locationSaveButton.setVisible(false);
+		if ((locationNameField.getText() == null || locationNameField.getText().trim().isEmpty())
+			|| (locationOpenField.getText() == null || locationOpenField.getText().trim().isEmpty())
+			|| (locationCloseField.getText() == null || locationCloseField.getText().trim().isEmpty())
+			|| (locationDurationField.getText() == null || locationDurationField.getText().trim().isEmpty())) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+	           alert.setTitle("Input fields empty");
+	           alert.setContentText("Please fill all input fields");
+	           alert.showAndWait();
+		}
+		else {
+			/* Location newLocation = new Location();
+			 * newLocation.addLocation(locationNameField.getText(), locationOpenField.getText(),
+			 * 					      locationCloseField.getText(), locationDurationField.getText()
+			 */
+			locationNameField.clear();
+			locationOpenField.clear();
+			locationCloseField.clear();
+			locationDurationField.clear();
+			locationNameField.setVisible(false);
+			locationOpenField.setVisible(false);
+			locationCloseField.setVisible(false);
+			locationDurationField.setVisible(false);
+			locationSaveButton.setVisible(false);
+		}
 	}
+
 	@FXML
 	private void editLocationButtonAction(ActionEvent event) throws IOException {
 
 	}
+
+	@FXML
+	private void deleteLocationButtonAction(ActionEvent event) throws IOException {
+
+	}
+
 	@FXML
 	private void saveEmailButtonAction(ActionEvent event) throws IOException {
 		/*gets email from text field and saves it to where it needs to be saved*/
@@ -100,5 +137,6 @@ public class settingsClass {
 	@FXML
 	private void resetYearButtonAction(ActionEvent event) throws IOException {
 		/*resets the scheduled hours*/
+
 	}
 }

@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,35 +11,33 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class profileClass implements Initializable{
-
-	@FXML Button addEmployeeButton;
-	@FXML ChoiceBox<String> employeeStatusChoiceBox;
-	@FXML TextField firstNameField;
-	@FXML TextField lastNameField;
-	@FXML ChoiceBox<String> addEmployeeStatusChoiceBox;
-	@FXML Button saveEmployeeButton;
-
+public class individualProfileClass implements Initializable {
+	@FXML AnchorPane mainAnchorPane;
+	@FXML ChoiceBox<String> dayChoiceBox;
+	@FXML ChoiceBox<String> shiftChoiceBox;
+	@FXML TextField commentField;
+	@FXML Button addPreferenceButton;
+	@FXML Button editPreferenceButton;
+	@FXML Button editEmployeeInfoButton;
+	@FXML Button deleteEmployeeButton;
 
 	@Override
 	public void initialize(URL url, ResourceBundle resources){
-		/*populate table*/
-		employeeStatusChoiceBox.getItems().addAll(
-				"All Employees",
-				"Doctor",
-			    "Moonlighter",
-			    "PA"
+		dayChoiceBox.getItems().addAll(
+				"Monday", "Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
 			);
-		employeeStatusChoiceBox.getSelectionModel().selectFirst();
+		dayChoiceBox.getSelectionModel().selectFirst();
+		shiftChoiceBox.getItems().addAll(
+				"Morning","Day","Night"
+				);
+		shiftChoiceBox.getSelectionModel().selectFirst();
 	}
 
 	@FXML
@@ -55,7 +51,7 @@ public class profileClass implements Initializable{
 
 	@FXML
 	private void profileButtonAction(ActionEvent event) throws IOException {
-	    Parent profilepane = FXMLLoader.load(getClass().getResource("profile.fxml"));
+		Parent profilepane = FXMLLoader.load(getClass().getResource("profile.fxml"));
 		Scene profileScene = new Scene(profilepane);
 		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		app_stage.setScene(profileScene);
@@ -88,41 +84,4 @@ public class profileClass implements Initializable{
 		app_stage.show();
 	}
 
-	@FXML
-	private void addEmployeeButtonAction(ActionEvent event) throws IOException {
-		addEmployeeStatusChoiceBox.getItems().addAll(
-				"Doctor",
-			    "Moonlighter",
-			    "PA"
-			);
-		addEmployeeStatusChoiceBox.getSelectionModel().selectFirst();
-
-		firstNameField.setVisible(true);
-		lastNameField.setVisible(true);
-		addEmployeeStatusChoiceBox.setVisible(true);
-		saveEmployeeButton.setVisible(true);
-	}
-	@FXML
-	private void saveEmployeeButtonAction(ActionEvent event) throws IOException {
-		/*take text from the text field and save it how it needs to be saved*/
-		if ((firstNameField.getText() == null || firstNameField.getText().trim().isEmpty())
-			|| (lastNameField.getText() == null || lastNameField.getText().trim().isEmpty())) {
-			Alert alert = new Alert(AlertType.INFORMATION);
-	           alert.setTitle("Input fields empty");
-	           alert.setContentText("Please fill all input fields");
-	           alert.showAndWait();
-		}
-		else{
-			/*Employee newEmployee = new Employee();
-			 * newEmployee(locationNameField.getText(), locationOpenField.getText(),
-			 * 			   locationCloseField.getText(), locationDurationField.getText()
-			 */
-			firstNameField.clear();
-			lastNameField.clear();
-			firstNameField.setVisible(false);
-			lastNameField.setVisible(false);
-			addEmployeeStatusChoiceBox.setVisible(false);
-			saveEmployeeButton.setVisible(false);
-		}
-	}
 }

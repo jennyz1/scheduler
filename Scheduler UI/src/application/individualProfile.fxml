@@ -10,21 +10,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white; -fx-border-color: black;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.profileClass">
+<AnchorPane fx:id="mainAnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.individualProfileClass">
    <children>
       <VBox layoutY="25.0" prefHeight="400.0" prefWidth="86.0" style="-fx-background-color: #17246D;" styleClass="navigation_box" stylesheets="@application.css" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#homeButtonAction" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/home.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#profileButtonAction" prefHeight="80.0" prefWidth="86.0" styleClass="navigation_button" stylesheets="@application.css">
                <graphic>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#profileButtonAction" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../images/profile.png" />
                      </image>
@@ -57,18 +57,24 @@
                </graphic>
             </Button>
          </children></VBox>
-      <TableView layoutX="122.0" layoutY="80.0" prefHeight="262.0" prefWidth="453.0">
+      <TableView layoutX="111.0" layoutY="161.0" prefHeight="200.0" prefWidth="478.0">
         <columns>
-          <TableColumn prefWidth="140.3333511352539" text="First" />
-          <TableColumn prefWidth="140.00001525878906" text="Last" />
-          <TableColumn prefWidth="181.33328247070312" text="Status" />
+          <TableColumn prefWidth="140.0000228881836" text="Non-Availability" />
+          <TableColumn prefWidth="107.33338928222656" text="Shift" />
+          <TableColumn prefWidth="229.33328247070312" text="Comment" />
         </columns>
       </TableView>
-      <ChoiceBox fx:id="employeeStatusChoiceBox" layoutX="122.0" layoutY="36.0" prefWidth="150.0" />
-      <Button fx:id="addEmployeeButton" layoutX="481.0" layoutY="36.0" mnemonicParsing="false" onAction="#addEmployeeButtonAction" styleClass="navigation_button" text="Add Employee" />
-      <TextField fx:id="firstNameField" layoutX="123.0" layoutY="353.0" prefHeight="25.0" prefWidth="129.0" promptText="First Name" visible="false" />
-      <TextField fx:id="lastNameField" layoutX="272.0" layoutY="353.0" prefHeight="25.0" prefWidth="129.0" promptText="Last Name" visible="false" />
-      <ChoiceBox fx:id="addEmployeeStatusChoiceBox" layoutX="413.0" layoutY="352.0" prefHeight="27.0" prefWidth="102.0" visible="false" />
-      <Button fx:id="saveEmployeeButton" layoutX="528.0" layoutY="353.0" mnemonicParsing="false" onAction="#saveEmployeeButtonAction" prefHeight="25.0" prefWidth="43.0" styleClass="navigation_button" text="Save" visible="false" />
+      <ImageView fitHeight="153.0" fitWidth="132.0" layoutX="109.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/profile_picture.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="editEmployeeInfoButton" layoutX="359.0" layoutY="126.0" mnemonicParsing="false" styleClass="navigation_button" text="Edit Employee Info" />
+      <Button fx:id="editPreferenceButton" layoutX="249.0" layoutY="126.0" mnemonicParsing="false" styleClass="navigation_button" text="Edit Preferences" />
+      <Button fx:id="deleteEmployeeButton" layoutX="480.0" layoutY="126.0" mnemonicParsing="false" styleClass="navigation_button" text="Delete Employee" />
+      <TextField fx:id="commentField" layoutX="376.0" layoutY="364.0" promptText="Reasoning" />
+      <Button fx:id="addPreferenceButton" layoutX="533.0" layoutY="365.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" styleClass="navigation_button" text="Add" />
+      <ChoiceBox fx:id="dayChoiceBox" layoutX="111.0" layoutY="365.0" prefHeight="27.0" prefWidth="141.0" />
+      <ChoiceBox fx:id="shiftChoiceBox" layoutX="261.0" layoutY="365.0" prefHeight="27.0" prefWidth="105.0" />
    </children>
 </AnchorPane>

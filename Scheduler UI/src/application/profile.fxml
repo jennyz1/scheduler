@@ -66,8 +66,8 @@
       </TableView>
       <ChoiceBox fx:id="employeeStatusChoiceBox" layoutX="122.0" layoutY="36.0" prefWidth="150.0" />
       <Button fx:id="addEmployeeButton" layoutX="481.0" layoutY="36.0" mnemonicParsing="false" onAction="#addEmployeeButtonAction" styleClass="navigation_button" text="Add Employee" />
-      <TextField fx:id="firstNameField" layoutX="123.0" layoutY="353.0" prefHeight="25.0" prefWidth="129.0" visible="false" />
-      <TextField fx:id="lastNameField" layoutX="272.0" layoutY="353.0" prefHeight="25.0" prefWidth="129.0" visible="false" />
+      <TextField fx:id="firstNameField" layoutX="123.0" layoutY="353.0" prefHeight="25.0" prefWidth="129.0" promptText="First Name" visible="false" />
+      <TextField fx:id="lastNameField" layoutX="272.0" layoutY="353.0" prefHeight="25.0" prefWidth="129.0" promptText="Last Name" visible="false" />
       <ChoiceBox fx:id="addEmployeeStatusChoiceBox" layoutX="413.0" layoutY="352.0" prefHeight="27.0" prefWidth="102.0" visible="false" />
       <Button fx:id="saveEmployeeButton" layoutX="528.0" layoutY="353.0" mnemonicParsing="false" onAction="#saveEmployeeButtonAction" prefHeight="25.0" prefWidth="43.0" styleClass="navigation_button" text="Save" visible="false" />
    </children>

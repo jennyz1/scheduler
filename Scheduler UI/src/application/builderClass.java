@@ -1,6 +1,9 @@
 package application;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -23,6 +26,7 @@ public class builderClass {
 	@FXML DatePicker startingDatePicker;
 	@FXML DatePicker endingDatePicker;
 	@FXML VBox locationRadioButtons;
+
 
 	@FXML
 	private void homeButtonAction(ActionEvent event) throws IOException {
@@ -66,6 +70,20 @@ public class builderClass {
 		Stage app_stage = (Stage)((Node) event.getSource()).getScene().getWindow();
 		app_stage.setScene(settingsScene);
 		app_stage.show();
+	}
+
+	@FXML
+	private void generateScheduleButtonAction(ActionEvent event) throws IOException {
+		ArrayList<Object> employeesList = new ArrayList<Object>();
+
+        Employee emp1 = new Employee("Michael", "Ramirez", 30, 40);
+        Employee emp2 = new Employee("Krystal", "Ramirez", 30, 40);
+        employeesList.add(emp1);
+        employeesList.add(emp2);
+
+		MasterSchedule mSch = new MasterSchedule();
+		mSch.generateSchedule(employeesList);
+		
 	}
 
 }

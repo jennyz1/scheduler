@@ -90,6 +90,6 @@
       <TextField fx:id="locationOpenField" layoutX="258.0" layoutY="191.0" prefHeight="25.0" prefWidth="84.0" visible="false" />
       <TextField fx:id="locationCloseField" layoutX="357.0" layoutY="191.0" prefHeight="25.0" prefWidth="73.0" visible="false" />
       <TextField fx:id="locationDurationField" layoutX="440.0" layoutY="191.0" prefHeight="25.0" prefWidth="73.0" visible="false" />
-      <Button fx:id="locationSaveButton" layoutX="534.0" layoutY="191.0" mnemonicParsing="false" onAction="#locationSaveButtonAction" prefHeight="25.0" prefWidth="37.0" styleClass="navigation_button" text="Save" visible="false" />
+      <Button fx:id="locationSaveButton" layoutX="518.0" layoutY="191.0" mnemonicParsing="false" onAction="#locationSaveButtonAction" prefHeight="25.0" prefWidth="53.0" styleClass="navigation_button" text="Save" visible="false" />
    </children>
 </AnchorPane>
