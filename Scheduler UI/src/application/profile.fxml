@@ -57,11 +57,11 @@
                </graphic>
             </Button>
          </children></VBox>
-      <TableView layoutX="122.0" layoutY="80.0" prefHeight="262.0" prefWidth="453.0">
+      <TableView fx:id="profileTable" layoutX="122.0" layoutY="80.0" prefHeight="262.0" prefWidth="453.0">
         <columns>
-          <TableColumn prefWidth="140.3333511352539" text="First" />
-          <TableColumn prefWidth="140.00001525878906" text="Last" />
-          <TableColumn prefWidth="181.33328247070312" text="Status" />
+          <TableColumn fx:id="firstNameCol" prefWidth="140.3333511352539" text="First" />
+          <TableColumn fx:id="lastNameCol" prefWidth="140.00001525878906" text="Last" />
+          <TableColumn fx:id="occupationCol" prefWidth="181.33328247070312" text="Status" />
         </columns>
       </TableView>
       <ChoiceBox fx:id="employeeStatusChoiceBox" layoutX="122.0" layoutY="36.0" prefWidth="150.0" />
@@ -70,5 +70,6 @@
       <TextField fx:id="lastNameField" layoutX="272.0" layoutY="353.0" prefHeight="25.0" prefWidth="129.0" promptText="Last Name" visible="false" />
       <ChoiceBox fx:id="addEmployeeStatusChoiceBox" layoutX="413.0" layoutY="352.0" prefHeight="27.0" prefWidth="102.0" visible="false" />
       <Button fx:id="saveEmployeeButton" layoutX="528.0" layoutY="353.0" mnemonicParsing="false" onAction="#saveEmployeeButtonAction" prefHeight="25.0" prefWidth="43.0" styleClass="navigation_button" text="Save" visible="false" />
+      <Button fx:id="openButton" layoutX="418.0" layoutY="36.0" mnemonicParsing="false" onAction="#openButtonAction" styleClass="navigation_button" text="Edit" />
    </children>
 </AnchorPane>

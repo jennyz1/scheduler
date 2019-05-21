@@ -1,43 +1,22 @@
 package application;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class viewClass implements Initializable {
+public class generatorClass {
 	@FXML AnchorPane mainAnchorPane;
-	@FXML Button editSchedule;
-	@FXML ChoiceBox<String> locationChoiceBox;
-	@FXML TableView<String> scheduleTable;
-
-	public void readSchedule() {
-
-	}
-
-	@Override
-	public void initialize(URL url, ResourceBundle resources){
-		locationChoiceBox.getItems().addAll(
-				"Location 1", "Location 2"
-			);
-		locationChoiceBox.getSelectionModel().selectFirst();
-
-	}
-
+	@FXML ScrollPane mainScrollPane;
 
 	@FXML
 	private void homeButtonAction(ActionEvent event) throws IOException {
@@ -82,6 +61,5 @@ public class viewClass implements Initializable {
 		app_stage.setScene(settingsScene);
 		app_stage.show();
 	}
-
 
 }
